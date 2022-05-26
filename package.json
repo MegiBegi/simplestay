@@ -2,6 +2,8 @@
   "name": "simplestay",
   "version": "0.1.0",
   "private": true,
+  "author": "Michal Konczak <michal.stefan.konczak@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "build:landlord": "yarn workspace landlord build",
     "dev:landlord": "yarn workspace landlord dev",
