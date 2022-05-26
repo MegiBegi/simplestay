@@ -3,11 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build:landlord": "yarn workspace landlord build",
+    "dev:landlord": "yarn workspace landlord dev",
+    "dev:tenant": "yarn workspace tenant dev",
+    "build:tenant": "yarn workspace srvr build"
   },
+  "packageManager": "yarn@3.2.1",
+  "engines": {
+    "yarn": ">=1.22.4"
+  },
+  "cacheDirectories": [
+    ".yarn/cache"
+  ],
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
   "dependencies": {
     "next": "12.1.6",
     "react": "18.1.0",
