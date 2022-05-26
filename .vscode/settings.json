@@ -1,0 +1,23 @@
+{
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.workingDirectories": ["apps/consumer", "apps/enterprise", "apps/org-settings", "libs/ui", "libs/graphql"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true,
+    "**/.next/**": true
+  },
+  "search.exclude": {
+    "**/.next/**": true,
+    ".yarn": true,
+    "**/tsconfig.tsbuildinfo": true
+  },
+  "cSpell.words": ["simplestay"]
+}

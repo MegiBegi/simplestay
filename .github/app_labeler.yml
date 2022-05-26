@@ -1,0 +1,8 @@
+tenant:
+  - apps/tenant/*
+landlord:
+  - apps/landlord/*
+graph:
+  - apps/graph/*
+libs:
+  - libs/libs/*

@@ -1,0 +1,32 @@
+name: static-checks
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DATABASE_URL_PROD: ${{ secrets.DATABASE_URL }}
+      HASURA_ACCESS_KEY: ${{ secrets.HASURA_ACCESS_KEY }}
+      HASURA_ENDPOINT: https://relatable-hasura-updated.herokuapp.com/v1/graphql
+      MODE: prod
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.18.1'
+
+      - run: npm config set "//registry.npmjs.org/:_authToken" ${{ secrets.NPM_TOKEN }}
+      - name: 'Install node modules'
+        run: 'npm install'
+      - name: 'Gen gql'
+        run: 'npm run gen'
+      - name: Check typescript
+        run: npm run ts-check
+      - name: Check linting
+        run: npm run lint
