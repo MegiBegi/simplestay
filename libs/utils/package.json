@@ -1,0 +1,11 @@
+{
+  "name": "@simplestay/utils",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "private": true,
+  "devDependencies": {
+    "@simplestay/eslint": "workspace:*",
+    "typescript": "4.5.5"
+  }
+}
