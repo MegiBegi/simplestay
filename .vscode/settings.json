@@ -12,12 +12,28 @@
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/.hg/store/**": true,
-    "**/.next/**": true
+    "**/.next/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true
   },
   "search.exclude": {
     "**/.next/**": true,
     ".yarn": true,
     "**/tsconfig.tsbuildinfo": true
   },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/tmp": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true
+  },
+
   "cSpell.words": ["simplestay"]
 }

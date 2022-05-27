@@ -1,11 +1,13 @@
 import type { NextPage } from 'next'
+
 import Head from 'next/head'
 import Image from 'next/image'
+
 import { helper } from '@simplestay/utils'
-import { type } from '@simplestay/eslint'
 
 const Home: NextPage = () => {
   helper()
+
   return (
     <div>
       <Head>

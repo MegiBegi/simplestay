@@ -1,7 +1,7 @@
-const { join } = require('path');
+const { join } = require('path')
 
 module.exports = {
-  extends: ['@simplestay/eslint'],
+  extends: ['@simplestay/eslint-config'],
   rules: {
     'import/no-extraneous-dependencies': [
       2,
@@ -9,4 +9,4 @@ module.exports = {
       { packageDir: [__dirname, join(__dirname, '../../')] },
     ],
   },
-};
+}
